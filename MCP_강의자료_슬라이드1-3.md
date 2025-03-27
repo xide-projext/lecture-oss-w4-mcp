@@ -1,9 +1,8 @@
 ---
 marp: true
-theme: default
 ---
 
-# MCP(Model Context Protocol) 강의 자료
+
 ## 슬라이드 1: MCP의 개요
 
 ### MCP의 정의

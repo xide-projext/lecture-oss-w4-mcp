@@ -1,4 +1,4 @@
-# MCP(Model Context Protocol) 강의 자료
+
 
 ## 개요
 

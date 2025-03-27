@@ -1,8 +1,7 @@
 ---
 marp: true
-theme: default
 ---
-# MCP(Model Context Protocol) 강의 자료
+
 ## 슬라이드 4: 오픈소스화가 개발자 및 산업에 미친 영향
 
 ### 개발자에게 미친 영향

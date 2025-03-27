@@ -1,9 +1,8 @@
 ---
 marp: true
-theme: default
 ---
 
-# MCP(Model Context Protocol) 강의 자료
+
 ## 슬라이드 7: MCP의 영향과 전파 이력
 
 ### 다양한 산업 분야에서의 MCP 적용 사례

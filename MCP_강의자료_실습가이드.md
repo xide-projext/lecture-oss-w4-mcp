@@ -1,6 +1,5 @@
 ---
 marp: true
-theme: default
 ---
 # MCP(Model Context Protocol) 실습 가이드
 

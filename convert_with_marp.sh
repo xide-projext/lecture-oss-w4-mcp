@@ -13,9 +13,9 @@ if [ ! -d "docs" ]; then
 fi
 
 # 슬라이드 파일 변환
-for file in MCP_강의자료_슬라이드*.md; do
+for file in MCP_강의자료_전체슬라이드.md; do
     echo "변환 중: $file"
-    marp --html --output docs/$(basename "${file%.*}").html "$file"
+    marp --html --allow-local-files --theme ./theme.css --output docs/$(basename "${file%.*}").html "$file"
 done
 
 # 실습 가이드 변환

@@ -1,0 +1,421 @@
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --text-color: #f5f5f5;
+    --light-text: #ffffff;
+    --code-background: #2d2d2d;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+  
+  columns.columns {
+     display: flex;
+     gap: 1rem;
+}
+.columns > div {
+    flex: 1 1 0;
+}
+.formula {
+  font-size: 1.7rem;
+}
+.split {
+  display: flex;
+  gap: 1rem;
+}
+.split > div {
+ flex: 1 1 0;
+}
+  section.title {
+    background: linear-gradient(135deg, #303f9f, #1a237e);
+  }
+  
+  tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
+  
+  .box {
+    background-color: rgba(121, 134, 203, 0.2);
+  }
+  
+  .warning-box {
+    background-color: rgba(255, 87, 34, 0.2);
+  }
+  
+  .info-box {
+    background-color: rgba(3, 169, 244, 0.2);
+  }
+  
+  .instructor-note {
+    background-color: rgba(76, 175, 80, 0.2);
+  }
+}/* premium-theme.css */
+/* 고급스러운 NLP 강의용 Marp 테마 */
+
+/* 기본 테마 설정 */
+:root {
+  --main-color: #283593;       /* 짙은 남색 - 약간 밝게 조정 */
+  --accent-color: #5c6bc0;     /* 밝은 남색 - 더 밝게 조정 */
+  --text-color: #212121;       /* 짙은 회색 */
+  --light-text: #ffffff;       /* 순수 흰색으로 변경 */
+  --gray-text: #777777;       /* 회색 */
+  --background: #ffffff;       /* 흰색 배경 */
+  --code-background: #f5f7f9;  /* 코드 배경 */
+  --quote-color: #4a148c;      /* 인용 색상 */
+  --link-color: #3f51b5;       /* 링크 색상 */
+  --shadow: rgba(0, 0, 0, 0.2); /* 그림자 강화 */
+  --gradient-bg: linear-gradient(135deg, #283593, #5c6bc0); /* 더 밝은 그라데이션 */
+}
+
+/* 슬라이드 기본 설정 */
+section {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: 'Noto Sans KR', 'Noto Sans', 'Roboto', sans-serif;
+  padding: 40px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* 제목 슬라이드 */
+section.title {
+  background: var(--gradient-bg);
+  color: var(--light-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section.title h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section.title h2 {
+  font-size: 2.8em;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+section.title footer {
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* 헤더 스타일 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--main-color);
+  margin-top: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.2em;
+  margin-bottom: 0.0em;
+  margin-top: 0.0em;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 0.0em;
+  margin-top: 0.3em;
+  color: var(--gray-text);
+
+}
+
+h3 {
+  font-size: 1.5em;
+  color: var(--accent-color);
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+/* 한국어/영어 병기 스타일 */
+.bilingual {
+  display: flex;
+  align-items: center;
+  margin: 0.8em 0;
+}
+
+.bilingual .kr {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.bilingual .en {
+  flex: 1;
+  padding-left: 10px;
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+/* 목록 스타일 */
+ul, ol {
+  margin-left: 0.8em;
+  padding-left: 1.5em;
+}
+
+li {
+  padding-left: 0.3em;
+}
+
+ul li::marker {
+  color: var(--accent-color);
+}
+
+ol li::marker {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* 코드 블록 */
+pre {
+  background-color: var(--code-background);
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow: auto;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Source Code Pro', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+/* 인용구 */
+blockquote {
+  border-left: 5px solid var(--accent-color);
+  padding-left: 1em;
+  margin: 1.5em 0;
+  color: var(--quote-color);
+  font-style: italic;
+}
+
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+th {
+  background-color: var(--main-color);
+  color: var(--light-text);
+  padding: 0.8em;
+  text-align: left;
+}
+
+td {
+  padding: 0.8em;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+header{
+  font-size: 0.8em;
+  color: var(--gray-text);
+}
+/* 이미지 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* 링크 */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--link-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* 강조 */
+strong {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+/* 박스 디자인 */
+.box {
+  background-color: rgba(121, 134, 203, 0.1);
+  border-left: 5px solid var(--accent-color);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.warning-box {
+  background-color: rgba(255, 87, 34, 0.1);
+  border-left: 5px solid #ff5722;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.info-box {
+  background-color: rgba(3, 169, 244, 0.1);
+  border-left: 5px solid #03a9f4;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* 교수자 노트 스타일 */
+.instructor-note {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px dashed #4caf50;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* 바닥글 */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #777;
+}
+
+/* 페이지 번호 */
+section::after {
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 0.8em;
+  color: #777;
+}
+
+/* 레이아웃 클래스 */
+section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+section.three-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* 다이어그램과 코드를 위한 특별 레이아웃 */
+.code-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 이미지 위치 클래스 */
+.image-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
+.image-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
+.image-bottom-left {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
+.image-bottom-right {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  width: 150px;
+  height: auto;
+  z-index: 10;
+}
+
+.image-center {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  height: auto;
+}
+
+/* 이미지 크기 클래스 */
+.image-small {
+  width: 100px !important;
+  height: auto !important;
+}
+
+.image-medium {
+  width: 200px !important;
+  height: auto !important;
+}
+
+.image-large {
+  width: 300px !important;
+  height: auto !important;
+}
+
+/* 특별 이미지 스타일 */
+.logo {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
